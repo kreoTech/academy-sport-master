@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Account page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuesax/dist/vuesax.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out laine-bg" id="wrap">
+      <!-- <div class="laine-bg__left"></div> -->
+      <!-- START header -->
+      <header class="header">
+        <div class="header__top-line"></div>
+        <div class="container header-container">
+          <a href="/page.html" class="header__logo">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- END header -->
+      <!-- START hero -->
+      <div class="container hero-container">
+        <div class="hero">
+          <div class="hero__title">КАБИНЕТ ПАРТНЕРА</div>
+          <form class="hero__search">
+            <input type="text" class="hero__search--input" placeholder="Попробуйте найти..." />
+            <button type="button" class="hero__search--btn">
+              <img src="img/icons/icon-6.svg" alt="">
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- END hero -->
+      <!-- START mobile-menu -->
+      <template lang="html">
+        <div id="parentx">
+          <!-- START title mobile -->
+          <div class="main-title-mobile">
+            <div class="main-title-mobile__title"> ДЛЯ ТРЕНЕРА </div>
+            <div class="main-title-mobile__btns">
+              <span @click="active=!active" class="main-title-mobile__icon menu-mob">
+                <img src="./img/icons/icon-menu-mob.png" />
+              </span>
+              <div class="form-search-mobile">
+                <input v-show="activeSearch" type="text" class="hero__search--input main-title-mobile__btns--input" placeholder="Попробуйте найти..." />
+                <span @click="activeSearch=!activeSearch" class="main-title-mobile__icon search-mob">
+                  <img src="./img/icons/icon-search-mob.png" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- END title mobile -->
+          <vs-sidebar parent="body" color="primary" class="sidebarx" spacer v-model="active">
+            <span @click="active=!active" class="close-sidebar-menu">
+              <i class="material-icons"> close </i>
+            </span>
+            <div class="header-sidebar" slot="header"> МЕНЮ </div>
+            <vs-sidebar-item href="#" index="1">
+              <img class="icon-sidebar" src="./img/icons/icon-1-1.svg" /> Общая статистика </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="2">
+              <img class="icon-sidebar" src="./img/icons/icon-2-1.svg" /> Спортсмены </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="3">
+              <img class="icon-sidebar" src="./img/icons/icon-3-1.svg" /> Пригласить друзей </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="4">
+              <img class="icon-sidebar" src="./img/icons/icon-4-1.svg" /> Аккаунт </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="5" class="trainer-link">
+              <span class="trainer-link__counter">1</span>
+              <img class="icon-sidebar" src="./img/icons/trainer-1.svg" /> Для тренера </vs-sidebar-item>
+            <a href="#" class="sidebar-mob-btn">Выход</a>
+          </vs-sidebar>
+        </div>
+      </template>
+      <!-- END mobile-menu -->
+      <img class="lain-left" src="../img/stripes-left.png" />
+      <img class="lain-right" src="../img/stripes-right.png" />
+      <!-- START content -->
+      <div class="container">
+        <div class="grid-container">
+          <!-- START sidebar -->
+          <div class="sidebar">
+            <div class="sidebar__hero">
+              <div class="sidebar__hero--ava">AC</div>
+              <div class="sidebar__hero--hello">Здравствуйте,</div>
+              <div class="sidebar__hero--user">Александр Савельев</div>
+            </div>
+            <div class="sidebar__menu">
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-1-1.svg" /> Общая статистика </a>
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-2-1.svg" /> Спортсмены </a>
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-3-1.svg" /> Пригласить друзей </a>
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-4-1.svg" /> Аккаунт </a>
+              <a href="#" class="sidebar__menu--link trainer-link">
+                <span class="trainer-link__counter">1</span>
+                <img class="icon-sidebar" src="./img/icons/trainer-1.svg" /> Для тренера </a>
+            </div>
+            <a href="#" class="sidebar__btn-big">Выход</a>
+          </div>
+          <!-- END sidebar -->
+          <div class="main">
+            <!-- START main-title -->
+            <template lang="html">
+              <div class="main-title-btn _trainer-tile">
+                <div class="main-title-btn__title"> ДЛЯ ТРЕНЕРА </div>
+                <div class="main-title-btn__btns">
+                  <!-- START table-btn -->
+                  <div class="table-btns hero-btn">
+                    <button class="table-btn table-btns--white hero-btn">УДАЛИТЬ</button>
+                    <button @click="popupActivo=true" class="table-btn table-btns--blue hero-btn">ОТПРАВИТЬ</button>
+                    <div class="con-select-example">
+                      <vs-select class="selectExample" v-model="select1">
+                        <vs-select-item :key="index" :value="item.value" :text="item.text" v-for="item,index in options1" />
+                      </vs-select>
+                    </div>
+                    <!-- END table-btn -->
+                  </div>
+                </div>
+              </div>
+              <!-- START _trainer-tile mobile -->
+              <div class="_trainer-tile-mobile">
+                <div class="_trainer-tile-mobile__hero">
+                  <div class="con-select-example">
+                    <vs-select class="selectExample" v-model="select1">
+                      <vs-select-item :key="index" :value="item.value" :text="item.text" v-for="item,index in options1" />
+                    </vs-select>
+                  </div>
+                </div>
+                <div class="_trainer-tile-mobile__btn">
+                  <button class="table-btn table-btns--white">УДАЛИТЬ</button>
+                  <button @click="popupActivo=true" class="table-btn table-btns--blue ">ОТПРАВИТЬ</button>
+                </div>
+              </div>
+              <!-- END _trainer-tile mobile -->
+            </template>
+            <!-- END main-title -->
+            <!-- START  trainer-message -->
+            <div class="trainer-message">
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox1"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox2"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox3"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox4"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox5"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox6"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox7"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox8"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox9"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox10"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox11"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+              <div class="trainer-message__item">
+                <div class="trainer-message__item--check">
+                  <vs-checkbox color="danger" v-model="checkBox12"></vs-checkbox>
+                </div>
+                <div class="trainer-message__item--date">12/11/2019 </div>
+                <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+              </div>
+            </div>
+            <!-- END trainer-message -->
+            <!-- START  pagination -->
+            <div class="pagination-wr">
+              <div class="pagination">
+                <a href="#" class="pag-l">
+                </a>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="pag-r">
+                </a>
+              </div>
+            </div>
+            <!-- END  pagination -->
+            <!-- START pagination mobile -->
+            <div class="pagination-mob">
+              <button class="table-btn table-btns--white">ЗАГРУЗИТЬ ЕЩЕ</button>
+            </div>
+            <!-- END pagination mobile -->
+            <!-- START popUp -->
+            <div class="centerx">
+              <vs-popup class="holamundo pop-trainer" title="" :active.sync="popupActivo">
+                <div class="vs-popup__close-txt">Закрыть</div>
+                <div class="pop-trainer__title"> ОТПРАВИТЬ СООБЩЕНИЕ ТРЕНЕРУ </div>
+                <form class="trainer-form">
+                  <div class="trainer-form__hero">
+                    <div class="trainer-form__hero__item">
+                      <label for="file">выбор файла</label>
+                      <div class="trainer-form__hero__item--file" id="file"> Выберите файл <span class="icon-file"></span>
+                        <!-- <img src="../img/icons/file.svg" class="icon-file" /> -->
+                      </div>
+                    </div>
+                    <div class="trainer-form__hero__item">
+                      <label for="title">ЗАГОЛОВОК</label>
+                      <input type="text" placeholder="Введите заголовок" />
+                    </div>
+                  </div>
+                  <div class="trainer-form__bottom">
+                    <label for="txt">ТЕКСТ</label>
+                    <textarea placeholder="Введите текст"></textarea>
+                  </div>
+                  <div class="trainer-form__btn">
+                    <button class="table-btn table-btns--blue">ОТПРАВИТЬ</button>
+                  </div>
+                </form>
+              </vs-popup>
+            </div>
+            <!-- END popUp -->
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- START footer-hero -->
+      <div class="footer-hero">
+        <div class="footer-hero__shadow"></div>
+      </div>
+      <!-- END footer-hero -->
+      <!-- START footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__nav">
+            <a href="#" class="footer__nav--link">Главная</a>
+            <a href="#" class="footer__nav--link">Правила и условия</a>
+            <a href="#" class="footer__nav--link">Конфиденциальность</a>
+          </div>
+        </div>
+      </footer>
+      <!-- END footer -->
+      <!-- <div class="laine-bg__right"></div> -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

@@ -1,0 +1,23 @@
+ProjectTitle: app
+
+PageList:
+- file: page.html
+  ready: 50
+  
+- file: account.html
+  ready: 50
+
+- file: user-desc.html
+  ready: 50
+
+- file: user-dashbord.html
+  ready: 50
+
+- file: user-friends.html
+  ready: 50
+
+- file: athletes.html
+  ready: 50
+
+- file: trainer.html
+  ready: 50

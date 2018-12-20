@@ -1,0 +1,59 @@
+.table-hero {
+    font-family: $m-500;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 4rem;
+    font-family: $m-500;
+    color: $color-table-hero;
+    margin-top: 4rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2rem;
+        background-color: $color-line;
+        width: 100%;
+        height: 1px;
+    }
+
+    &__title {
+        flex: 1;
+        text-transform: uppercase;
+        @include r($sm) {
+            text-transform: none;
+        }
+    }
+
+    
+
+
+}
+
+.material-icons {
+    font-size: 2rem;
+}
+
+.vs-collapse .vs-collapse-item header .icon-header {
+    &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10.5px 0 10.5px;
+        border-color: #929497 transparent transparent transparent;
+    }
+    i {
+        display: none;
+    }
+
+    width: 21px;
+    height: 10px;
+    top: 50%;
+    margin-top: -5px;
+    right: 19px;
+}

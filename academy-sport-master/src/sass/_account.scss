@@ -1,0 +1,18 @@
+// account
+.account {
+
+    display: flex;
+
+    @include r($lg) {
+        flex-direction: column;
+    }
+
+    &__item {
+        flex: 1;
+
+        @include r($lg) {
+            width: 100%;
+            margin: 0 auto 2rem auto;
+        }
+    }
+}

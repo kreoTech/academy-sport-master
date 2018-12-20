@@ -1,0 +1,111 @@
+---
+title: Account page
+---
+{% extends "layouts/_layout.html" %}
+
+{# partial example #}
+
+{% block content %}
+{% include "partials/_header.html" %}
+
+<!-- START hero -->
+{% include "partials/_hero.html" %}
+<!-- END hero -->
+
+
+
+
+
+
+
+<!-- START mobile-menu -->
+<template lang="html">
+  <div id="parentx">
+    <!-- START title mobile -->
+    <div class="main-title-mobile">
+      <div class="main-title-mobile__title">
+        ДЛЯ ТРЕНЕРА
+      </div>
+
+      <div class="main-title-mobile__btns">
+        <span @click="active=!active" class="main-title-mobile__icon menu-mob">
+          <img src="./img/icons/icon-menu-mob.png" />
+        </span>
+        <div class="form-search-mobile">
+          <input v-show="activeSearch" type="text" class="hero__search--input main-title-mobile__btns--input" placeholder="Попробуйте найти..." />
+          <span @click="activeSearch=!activeSearch" class="main-title-mobile__icon search-mob">
+            <img src="./img/icons/icon-search-mob.png" />
+          </span>
+        </div>
+      </div>
+
+    </div>
+    <!-- END title mobile -->
+
+
+    <vs-sidebar parent="body" color="primary" class="sidebarx" spacer v-model="active">
+
+      <span @click="active=!active" class="close-sidebar-menu">
+        <i class="material-icons">
+          close
+        </i>
+      </span>
+
+      <div class="header-sidebar" slot="header">
+        МЕНЮ
+      </div>
+
+
+      <vs-sidebar-item href="#" index="1">
+        <img class="icon-sidebar" src="./img/icons/icon-1-1.svg" />
+        Общая статистика
+      </vs-sidebar-item>
+
+      <vs-sidebar-item href="#" index="2">
+        <img class="icon-sidebar" src="./img/icons/icon-2-1.svg" />
+        Спортсмены
+      </vs-sidebar-item>
+
+      <vs-sidebar-item href="#" index="3">
+        <img class="icon-sidebar" src="./img/icons/icon-3-1.svg" />
+        Пригласить друзей
+      </vs-sidebar-item>
+
+
+      <vs-sidebar-item href="#" index="4">
+        <img class="icon-sidebar" src="./img/icons/icon-4-1.svg" />
+        Аккаунт
+      </vs-sidebar-item>
+
+      <vs-sidebar-item href="#" index="5" class="trainer-link">
+          <span class="trainer-link__counter">1</span>
+        <img class="icon-sidebar" src="./img/icons/trainer-1.svg" />
+        Для тренера 
+      </vs-sidebar-item>
+
+      <a href="#" class="sidebar-mob-btn">Выход</a>
+
+    </vs-sidebar>
+
+  </div>
+</template>
+<!-- END mobile-menu -->
+
+
+
+
+<img class="lain-left" src="../img/stripes-left.png" />
+<img class="lain-right" src="../img/stripes-right.png" />
+<!-- START content -->
+<div class="container">
+  <div class="grid-container">
+    {% include "partials/_sidebar-trainer.html" %}
+    {% include "partials/_trainer.html" %}
+  </div>
+</div>
+<!-- END content -->
+
+
+
+{% include "partials/_footer.html" %}
+{% endblock %}

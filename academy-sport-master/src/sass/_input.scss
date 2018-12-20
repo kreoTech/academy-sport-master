@@ -1,0 +1,25 @@
+// input
+.input {
+
+    margin-right: 2rem;
+
+    @include r($lg) {
+        margin-bottom: 2rem;
+    }
+
+    
+    label {
+        font-family: $m-500;
+        color: $color-table-hero;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    input {
+        border: 1px solid $color-line;
+        border-radius: 50px;
+        width: 100%;
+        height: 4rem;
+        padding: 2rem 3rem;
+    }
+}

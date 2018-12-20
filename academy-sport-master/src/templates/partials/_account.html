@@ -1,0 +1,42 @@
+<div class="main">
+  <!-- START main-title -->
+  {% include "partials/_main-title-btn.html" %}
+  <!-- END main-title -->
+
+  <!-- START password -->
+  <form class="passwords">
+
+    <div class="password account">
+
+      <div class="input account__item">
+        <label for="pass-01">
+          ТЕКУЩИЙ ПАРОЛЬ
+        </label>
+        <input type="password" id="pass-01" />
+      </div>
+      <div class="input account__item">
+        <label for="pass-02">
+          НОВЫЙ ПАРОЛЬ
+        </label>
+        <input type="password" id="pass-02" />
+      </div>
+
+
+
+      <div class="password__desc account__item">
+        <span class="password__desc--err">Не менее 6 символов</span>
+        <span class="password__desc--err">Должна быть хотя бы 1 цифра</span>
+      </div>
+    </div>
+
+    <span class="lain-end"></span>
+
+    <!-- START table-btn -->
+    <div class="table-btns pass-acc">
+      <button class="table-btn table-btns--blue">Сохранить изменения</button>
+    </div>
+    <!-- END table-btn -->
+
+  </form>
+  <!-- END password -->
+</div>

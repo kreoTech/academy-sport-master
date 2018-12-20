@@ -1,0 +1,62 @@
+// dashbord
+.dashbord {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid $color-line;
+
+    @include r($lg) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__ava {
+        font-family: $m-500;
+        color: #fff;
+        background-color: $color-red;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 2rem;
+        font-size: 2.4rem;
+
+        @include r($lg) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__name {
+        @include r($lg) {
+            margin-bottom: 2rem;
+        }
+
+        &--lable {
+            font-family: $m-500 !important;
+            font-size: 1.6rem;
+            color: $color-table-hero;
+        }
+
+        span {
+            display: block;
+            font-family: $m-100;
+            color: $color-txt;
+        }
+    }
+}
+
+// btn mob 
+.dashbord-btn-mob {
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    display: none;
+
+    @include r($sm) {
+        display: flex;
+    }
+
+    button {
+        margin-bottom: 0 !important;
+    }
+}

@@ -1,0 +1,104 @@
+html {
+    font-size: 62.5%;
+
+    // @include r($lg) {
+    //     font-size: 50%;
+    // }
+
+    @include r($sm) {
+        font-size: 45%;
+    }
+
+    
+}
+
+body {
+    background: #fff;
+    line-height: 1.4;
+    font-size: 1.6rem;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+// grid
+.grid-container {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    grid-gap: 2rem;
+
+    @include r($md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// container
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include rmin($lg) {
+        max-width: 114rem;
+    }
+
+    @include rmin($md) {
+        max-width: 96rem;
+    }
+
+    @include rmin($sm) {
+        max-width: 72rem;
+    }
+
+    @include rmin($xs) {
+        max-width: 54rem;
+        // padding-left: 0;
+        // padding-right: 0;
+    }
+
+    @include r($xs) {
+        // padding-left: 0;
+        // padding-right: 0;
+    }
+    &_full {
+        @include r($sm) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+
+
+.lain-end {
+    border: 0.5px solid $color-line;
+    width: 100%;
+    display: block;
+    margin-top: 3rem;
+
+    @include r($sm) {
+        display: none;
+    }
+}
+
+
+// not
+@mixin not-r($nam) {
+    &:not(:last-child) {
+        margin-right: $nam;
+    }
+}
+
+// not
+@mixin not-l($nam) {
+    &:not(:last-child) {
+        margin-left: $nam;
+    }
+}

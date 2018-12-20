@@ -1,0 +1,81 @@
+// menu-mobile
+.vs-sidebar {
+    max-width: 40rem;
+    // position: relative;
+}
+
+.vs-sidebar header {
+    background-color: $color-blue;
+    color: #fff;
+    font-family: $m-500;
+    padding-left: 4rem;
+}
+
+.vs-sidebar .vs-sidebar-items .vs-sidebar-item {
+    img {
+        width: 3rem;
+        margin-right: 3rem;
+    }
+
+    a {
+        font-family: $m-500;
+        color: #3b1c15;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+
+
+}
+
+.sidebar-mob-btn {
+    background-color: $color-blue;
+    width: 100%;
+    padding: 2rem;
+    color: #fff;
+    display: block;
+    margin-top: 2rem;
+    font-family: $m-500;
+    font-size: 2rem;
+    padding-left: 7rem;
+
+    &:hover {
+        color: #fff;
+        background-color: $color-btn-hover;
+        text-decoration: none;
+    }
+}
+
+
+.close-sidebar-menu {
+    position: absolute;
+    right: -37px;
+    top: 0;
+    background-color: red;
+
+    @include r($xs) {
+        right: -31px;
+    }
+
+    i {
+        color: #fff;
+        font-size: 3.7rem;
+
+        @include r($xs) {
+            font-size: 4.9rem;
+        }
+    }
+}
+
+
+.icon-sidebar {
+    width: 3rem;
+    margin-right: 3rem;
+}
+
+.vs-sidebar--item a {
+    font-family: $m-500;
+    color: #3b1c15;
+    text-transform: uppercase;
+    font-size: 2rem;
+}

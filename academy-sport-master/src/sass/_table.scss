@@ -1,0 +1,126 @@
+// table
+.wrapper {
+    margin: 0 auto;
+    margin-top: 7rem;
+    width: 100%;
+
+    @include r($sm) {
+        overflow-x: scroll;
+        margin-top: 14px;
+    }
+}
+@include r($sm) {
+    .con-content--item {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 16px;
+    }
+}
+
+.table {
+    width: 100%;
+    display: table;
+}
+
+.row {
+    display: table-row;
+    background: #fff;
+    font-family: $m-100;
+    font-size: 1.4rem;
+    text-align: center;
+
+
+
+}
+
+
+.header-tb {
+    background: $color-gray;
+    font-family: $m-300;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+    color: $color-table-hero;
+    @include r($sm) {
+        .cell:first-child {
+            font-size: rems(13) !important;
+        }
+    }
+
+
+}
+
+.cell {
+    padding: 6px 12px;
+    display: table-cell;
+    border-bottom: 1px solid $color-line;
+    border-top: 1px solid $color-line;
+    border-right: 1px solid $color-line;
+    border-left: 1px solid $color-line;
+    color: $color-table-hero;
+
+    &:nth-child(1n) {
+        border-top: none;
+        border-left: none;
+        border-right: 1px solid $color-line;
+    }
+
+    &:nth-child(1) {
+        border-left: 1px solid $color-line;
+        border-right: 1px solid $color-line;
+    }
+    @include r($sm) {
+        font-size: rems(12);
+        padding: 9px 28px 7px;
+    }
+
+}
+
+.table > .header-tb > .cell {
+    &:nth-child(1n) {
+        border-top: 1px solid $color-line;
+        border-right: 1px solid $color-line;
+    }
+}
+
+.header-tb {
+    border: 1px solid $color-line;
+}
+
+.vs-collapse .vs-collapse-item {
+    border-bottom: none;
+    @include r($sm) {
+        border-bottom: 1px solid #d1d2d3;
+        &--header {
+            padding: 11px 50px 15px 30px;
+            position: relative;
+            top: 1px;
+            border-bottom: 1px solid #d1d2d3;
+            min-height: rems(36);
+        }
+        .table-hero {
+            margin-top: rems(0);
+            padding-left: rems(0);
+            &__title {
+                font-variant: small-caps;
+                font-weight: 300;
+                line-height: 1em  ;
+                font-size: rems(15);
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.vs-collapse {
+    padding: 0;
+    @include r($sm) {
+        &:first-child {
+            margin-top: rems(4);
+            border-top: 1px solid #d1d2d3;
+            border-radius: 0;
+        }
+    }
+}

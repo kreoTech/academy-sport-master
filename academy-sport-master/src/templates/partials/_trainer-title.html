@@ -1,0 +1,40 @@
+<template lang="html">
+  <div class="main-title-btn _trainer-tile">
+    <div class="main-title-btn__title">
+      ДЛЯ ТРЕНЕРА
+    </div>
+    <div class="main-title-btn__btns">
+      <!-- START table-btn -->
+      <div class="table-btns hero-btn">
+        <button class="table-btn table-btns--white hero-btn">УДАЛИТЬ</button>
+        <button @click="popupActivo=true" class="table-btn table-btns--blue hero-btn">ОТПРАВИТЬ</button>
+
+        <div class="con-select-example">
+          <vs-select class="selectExample" v-model="select1">
+            <vs-select-item :key="index" :value="item.value" :text="item.text" v-for="item,index in options1" />
+          </vs-select>
+        </div>
+        <!-- END table-btn -->
+      </div>
+    </div>
+  </div>
+
+  <!-- START _trainer-tile mobile -->
+  <div class="_trainer-tile-mobile">
+
+    <div class="_trainer-tile-mobile__hero">
+      <div class="con-select-example">
+        <vs-select class="selectExample" v-model="select1">
+          <vs-select-item :key="index" :value="item.value" :text="item.text" v-for="item,index in options1" />
+        </vs-select>
+      </div>
+    </div>
+
+    <div class="_trainer-tile-mobile__btn">
+        <button class="table-btn table-btns--white">УДАЛИТЬ</button>
+        <button @click="popupActivo=true" class="table-btn table-btns--blue ">ОТПРАВИТЬ</button>
+    </div>
+
+  </div>
+  <!-- END _trainer-tile mobile -->
+</template>

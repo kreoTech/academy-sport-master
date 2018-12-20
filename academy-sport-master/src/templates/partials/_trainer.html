@@ -1,0 +1,174 @@
+<div class="main">
+  <!-- START main-title -->
+  {% include "partials/_trainer-title.html" %}
+  <!-- END main-title -->
+
+  <!-- START  trainer-message -->
+  <div class="trainer-message">
+
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox1"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox2"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox3"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox4"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox5"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox6"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox7"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox8"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox9"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox10"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox11"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+
+    <div class="trainer-message__item">
+      <div class="trainer-message__item--check">
+        <vs-checkbox color="danger" v-model="checkBox12"></vs-checkbox>
+      </div>
+      <div class="trainer-message__item--date">12/11/2019 </div>
+      <div class="trainer-message__item--title">СТАТЬИ: Новая статья в разделе “Лыжные гонки”</div>
+    </div>
+  </div>
+  <!-- END trainer-message -->
+
+  <!-- START  pagination -->
+  <div class="pagination-wr">
+      <div class="pagination">
+          <a href="#" class="pag-l">
+          </a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#" class="pag-r">
+          </a>
+        </div>
+  </div>
+  
+  <!-- END  pagination -->
+
+  <!-- START pagination mobile -->
+  <div class="pagination-mob">
+    <button class="table-btn table-btns--white">ЗАГРУЗИТЬ ЕЩЕ</button>
+  </div>
+  <!-- END pagination mobile -->
+
+  <!-- START popUp -->
+  <div class="centerx">
+    <vs-popup class="holamundo pop-trainer" title="" :active.sync="popupActivo">
+
+      <div class="vs-popup__close-txt">Закрыть</div>
+
+      <div class="pop-trainer__title">
+        ОТПРАВИТЬ СООБЩЕНИЕ ТРЕНЕРУ
+      </div>
+
+      <form class="trainer-form">
+
+
+        <div class="trainer-form__hero">
+
+          <div class="trainer-form__hero__item">
+            <label for="file">выбор файла</label>
+            <div class="trainer-form__hero__item--file" id="file">
+              Выберите файл
+              <span class="icon-file"></span>
+              <!-- <img src="../img/icons/file.svg" class="icon-file" /> -->
+            </div>
+          </div>
+
+          <div class="trainer-form__hero__item">
+            <label for="title">ЗАГОЛОВОК</label>
+            <input type="text" placeholder="Введите заголовок" />
+          </div>
+
+        </div>
+
+        <div class="trainer-form__bottom">
+          <label for="txt">ТЕКСТ</label>
+          <textarea placeholder="Введите текст"></textarea>
+        </div>
+
+        <div class="trainer-form__btn">
+          <button class="table-btn table-btns--blue">ОТПРАВИТЬ</button>
+        </div>
+
+      </form>
+    </vs-popup>
+  </div>
+  <!-- END popUp -->
+
+</div>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Athletes page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuesax/dist/vuesax.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet" />
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <div class="out laine-bg" id="wrap">
+      <!-- <div class="laine-bg__left"></div> -->
+      <!-- START header -->
+      <header class="header">
+        <div class="header__top-line"></div>
+        <div class="container header-container">
+          <a href="/page.html" class="header__logo">
+            <img src="./img/logo.svg" alt="" />
+          </a>
+        </div>
+      </header>
+      <!-- END header -->
+      <!-- START hero -->
+      <div class="container hero-container">
+        <div class="hero">
+          <div class="hero__title">КАБИНЕТ ПАРТНЕРА</div>
+          <form class="hero__search">
+            <input type="text" class="hero__search--input" placeholder="Попробуйте найти..." />
+            <button type="button" class="hero__search--btn">
+              <img src="img/icons/icon-6.svg" alt="">
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- END hero -->
+      <!-- START mobile-menu -->
+      <template lang="html">
+        <div id="parentx">
+          <!-- START title mobile -->
+          <div class="main-title-mobile">
+            <div class="main-title-mobile__title"> СПОРТСМЕНЫ </div>
+            <div class="main-title-mobile__btns">
+              <span @click="active=!active" class="main-title-mobile__icon menu-mob">
+                <img src="./img/icons/icon-menu-mob.png" />
+              </span>
+              <div class="form-search-mobile">
+                <input v-show="activeSearch" type="text" class="hero__search--input main-title-mobile__btns--input" placeholder="Попробуйте найти..." />
+                <span @click="activeSearch=!activeSearch" class="main-title-mobile__icon search-mob">
+                  <img src="./img/icons/icon-search-mob.png" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- END title mobile -->
+          <vs-sidebar parent="body" color="primary" class="sidebarx" spacer v-model="active">
+            <span @click="active=!active" class="close-sidebar-menu">
+              <i class="material-icons"> close </i>
+            </span>
+            <div class="header-sidebar" slot="header"> МЕНЮ </div>
+            <vs-sidebar-item href="#" index="1">
+              <img class="icon-sidebar" src="./img/icons/icon-1-1.svg" /> Общая статистика </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="2">
+              <img class="icon-sidebar" src="./img/icons/icon-2-1.svg" /> Спортсмены </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="3">
+              <img class="icon-sidebar" src="./img/icons/icon-3-1.svg" /> Пригласить друзей </vs-sidebar-item>
+            <vs-sidebar-item href="#" index="4">
+              <img class="icon-sidebar" src="./img/icons/icon-4-1.svg" /> Аккаунт </vs-sidebar-item>
+            <a href="#" class="sidebar-mob-btn">Выход</a>
+          </vs-sidebar>
+        </div>
+      </template>
+      <!-- END mobile-menu -->
+      <img class="lain-left" src="../img/stripes-left.png" />
+      <img class="lain-right" src="../img/stripes-right.png" />
+      <!-- START content -->
+      <div class="container">
+        <div class="grid-container">
+          <!-- START sidebar -->
+          <div class="sidebar">
+            <div class="sidebar__hero">
+              <div class="sidebar__hero--ava">AC</div>
+              <div class="sidebar__hero--hello">Здравствуйте,</div>
+              <div class="sidebar__hero--user">Александр Савельев</div>
+            </div>
+            <div class="sidebar__menu">
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-1-1.svg" /> Общая статистика </a>
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-2-1.svg" /> Спортсмены </a>
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-3-1.svg" /> Пригласить друзей </a>
+              <a href="#" class="sidebar__menu--link">
+                <img class="icon-sidebar" src="./img/icons/icon-4-1.svg" /> Аккаунт </a>
+            </div>
+            <a href="#" class="sidebar__btn-big">Выход</a>
+          </div>
+          <!-- END sidebar -->
+          <div class="main">
+            <!-- START main-title -->
+            <div class="main-title"> СПОРТСМЕНЫ </div>
+            <!-- END main-title -->
+            <div class="wrapper athletes-wr">
+              <div class="table athletes-tb">
+                <div class="row header-tb athletes-tb__head">
+                  <div class="cell athletes-tb__head--cell"> Дата регистрации </div>
+                  <div class="cell athletes-tb__head--cell"> Ф.И.О спортсмена </div>
+                  <div class="cell athletes-tb__head--cell"> Вид спорта </div>
+                  <div class="cell athletes-tb__head--cell" style="padding: 4rem;"> Даты покупок </div>
+                  <div class="cell athletes-tb__head--cell"> Общая сумма </div>
+                  <div class="cell athletes-tb__head--cell"> Доход 10% </div>
+                </div>
+                <!-- START row -->
+                <div class="row">
+                  <div class="cell athletes-tb__cell" style="color: #939598;"> 12/11/2019 </div>
+                  <div class="cell athletes-tb__cell"> Сергей <br> Васильев </div>
+                  <div class="cell athletes-tb__cell"> Биатлон </div>
+                  <div class="cell athletes-tb__cell" style="padding: 1rem;"> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р </div>
+                  <div class="cell athletes-tb__cell"> 4500 </div>
+                  <div class="cell athletes-tb__cell"> 450 </div>
+                </div>
+                <!-- END row -->
+                <!-- START row -->
+                <div class="row">
+                  <div class="cell athletes-tb__cell" style="color: #939598;"> 12/11/2019 </div>
+                  <div class="cell athletes-tb__cell"> Сергей <br> Васильев </div>
+                  <div class="cell athletes-tb__cell"> Биатлон </div>
+                  <div class="cell athletes-tb__cell" style="padding: 1rem;"> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р </div>
+                  <div class="cell athletes-tb__cell"> 4500 </div>
+                  <div class="cell athletes-tb__cell"> 450 </div>
+                </div>
+                <!-- END row -->
+                <!-- START row -->
+                <div class="row">
+                  <div class="cell athletes-tb__cell" style="color: #939598;"> 12/11/2019 </div>
+                  <div class="cell athletes-tb__cell"> Сергей <br> Васильев </div>
+                  <div class="cell athletes-tb__cell"> Биатлон </div>
+                  <div class="cell athletes-tb__cell" style="padding: 1rem;"> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р </div>
+                  <div class="cell athletes-tb__cell"> 4500 </div>
+                  <div class="cell athletes-tb__cell"> 450 </div>
+                </div>
+                <!-- END row -->
+                <!-- START row -->
+                <div class="row">
+                  <div class="cell athletes-tb__cell" style="color: #939598;"> 12/11/2019 </div>
+                  <div class="cell athletes-tb__cell"> Сергей <br> Васильев </div>
+                  <div class="cell athletes-tb__cell"> Биатлон </div>
+                  <div class="cell athletes-tb__cell" style="padding: 1rem;"> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р </div>
+                  <div class="cell athletes-tb__cell"> 4500 </div>
+                  <div class="cell athletes-tb__cell"> 450 </div>
+                </div>
+                <!-- END row -->
+                <!-- START row -->
+                <div class="row">
+                  <div class="cell athletes-tb__cell" style="color: #939598;"> 12/11/2019 </div>
+                  <div class="cell athletes-tb__cell"> Сергей <br> Васильев </div>
+                  <div class="cell athletes-tb__cell"> Биатлон </div>
+                  <div class="cell athletes-tb__cell" style="padding: 1rem;"> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р <br> 16.07.2018 - 1500р </div>
+                  <div class="cell athletes-tb__cell"> 4500 </div>
+                  <div class="cell athletes-tb__cell"> 450 </div>
+                </div>
+                <!-- END row -->
+              </div>
+            </div>
+            <div class="athletes-desc">
+              <span class="athletes-desc__total">ИТОГО: 1050</span>
+              <!-- START table-btn -->
+              <div class="table-btns pass-acc athletes-desc__btn">
+                <button class="table-btn table-btns--blue">ВЫВЕСТИ</button>
+              </div>
+              <!-- END table-btn -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END content -->
+      <!-- START footer-hero -->
+      <div class="footer-hero">
+        <div class="footer-hero__shadow"></div>
+      </div>
+      <!-- END footer-hero -->
+      <!-- START footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__nav">
+            <a href="#" class="footer__nav--link">Главная</a>
+            <a href="#" class="footer__nav--link">Правила и условия</a>
+            <a href="#" class="footer__nav--link">Конфиденциальность</a>
+          </div>
+        </div>
+      </footer>
+      <!-- END footer -->
+      <!-- <div class="laine-bg__right"></div> -->
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

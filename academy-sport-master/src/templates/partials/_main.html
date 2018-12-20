@@ -1,0 +1,191 @@
+<div class="main">
+  <!-- START main-title -->
+  <div class="main-title">
+    ОБЩАЯ СТАТИСТИКА
+  </div>
+  <!-- END main-title -->
+
+
+  <!-- /////////////////////////////////////////////// -->
+  <template lang="html">
+    <div>
+      <vs-collapse accordion>
+
+
+        <vs-collapse-item>
+          <div slot="header">
+            <!-- START table-hero -->
+            <div class="table-hero">
+              <img class="icon-notes" src="./img/icons/note.svg" />
+              <span class="table-hero__title">ВАШ БАЛАНС <div class="visible-sm"></div>(в рублях)</span>
+            </div>
+            <!-- END table-hero -->
+          </div>
+
+
+
+          <!-- START table -->
+          {% include "partials/_table-balans.html" %}
+          <!-- END table -->
+
+          <!-- START table-btn -->
+          <div class="table-btns table-bt">
+            <button class="table-btn table-btns--blue">ВЫВЕСТИ</button>
+            <button class="table-btn table-btns--white">ВЫБРАТЬ ПЕРИОД</button>
+          </div>
+          <!-- END table-btn -->
+
+        </vs-collapse-item>
+
+
+
+
+        <!-- /////////////////////////////////////////////// -->
+
+
+        <vs-collapse-item>
+          <div slot="header">
+
+            <!-- START table-hero -->
+            <div class="table-hero">
+              <img class="icon-notes" src="./img/icons/note.svg" />
+              <span class="table-hero__title">КОЛИЧЕСТВО ПОКУПОК <div class="visible-sm"></div>(в чел.)</span>
+            </div>
+            <!-- END table-hero -->
+          </div>
+
+          <!-- START table -->
+          {% include "partials/_table-shopping.html" %}
+          <!-- END table -->
+
+          <!-- START table-btn -->
+          <div class="table-btns table-bt">
+            <div class="visible-sm"></div>
+            <button class="table-btn table-btns--white">ВЫБРАТЬ ПЕРИОД</button>
+          </div>
+          <!-- END table-btn -->
+
+        </vs-collapse-item>
+
+        <!-- /////////////////////////////////////////////// -->
+
+
+
+        <vs-collapse-item>
+          <div slot="header">
+
+            <!-- START table-hero -->
+            <div class="table-hero">
+              <img class="icon-notes" src="./img/icons/note.svg" />
+              <span class="table-hero__title">КОЛИЧЕСТВО ПОКУПОК <div class="visible-sm"></div>на человека</span>
+            </div>
+            <!-- END table-hero -->
+
+          </div>
+
+          <!-- START table -->
+          {% include "partials/_table-shopping.html" %}
+          <!-- END table -->
+
+          <!-- START table-btn -->
+          <div class="table-btns table-bt">
+            <div class="visible-sm"></div>
+            <button class="table-btn table-btns--white">ВЫБРАТЬ количество</button>
+          </div>
+          <!-- END table-btn -->
+
+
+        </vs-collapse-item>
+        <!-- /////////////////////////////////////////////// -->
+
+
+        <vs-collapse-item>
+          <div slot="header">
+
+            <!-- START table-hero -->
+            <div class="table-hero">
+              <img class="icon-notes" src="./img/icons/note.svg" />
+              <span class="table-hero__title">КОЛИЧЕСТВО ПОКУПОК <div class="visible-sm"></div>по тарифам</span>
+            </div>
+            <!-- END table-hero -->
+          </div>
+
+          <!-- START table -->
+          {% include "partials/_table-shopping.html" %}
+          <!-- END table -->
+
+          <!-- START table-btn -->
+          <div class="table-btns table-bt table-btns_row">
+            <button class="table-btn table-btns--blue">за день</button>
+            <button class="table-btn table-btns--white">за месяц</button>
+            <button class="table-btn table-btns--white">за год</button>
+            <button class="table-btn table-btns--white">все время</button>
+          </div>
+          <!-- END table-btn -->
+
+
+        </vs-collapse-item>
+        <!-- /////////////////////////////////////////////// -->
+
+
+        <vs-collapse-item>
+          <div slot="header">
+
+            <!-- START table-hero -->
+            <div class="table-hero">
+              <img class="icon-notes" src="./img/icons/note.svg" />
+              <span class="table-hero__title">КОЛИЧЕСТВО ПЕРЕХОДОВ <div class="visible-sm"></div>на сайт</span>
+            </div>
+            <!-- END table-hero -->
+          </div>
+
+          <!-- START table -->
+          {% include "partials/_table-site.html" %}
+          <!-- END table -->
+
+          <!-- START table-btn -->
+          <div class="table-btns table-bt">
+            <div class="visible-sm"></div>
+            <button class="table-btn table-btns--white">ВЫБРАТЬ ПЕРИОД</button>
+          </div>
+          <!-- END table-btn -->
+
+        </vs-collapse-item>
+
+        <!-- /////////////////////////////////////////////// -->
+
+
+        <vs-collapse-item>
+          <div slot="header">
+
+            <!-- START table-hero -->
+            <div class="table-hero">
+              <img class="icon-notes" src="./img/icons/note.svg" />
+              <span class="table-hero__title">ВЫ ПРИГЛАСИЛИ</span>
+            </div>
+            <!-- END table-hero -->
+          </div>
+
+          <!-- START table -->
+          {% include "partials/_table-invitation.html" %}
+          <!-- END table -->
+
+          <!-- START table-btn -->
+          <div class="table-btns table-bt">
+            <button class="table-btn table-btns--blue">ПРИГЛАСИТЬ</button>
+            <button class="table-btn table-btns--white">ВЫБРАТЬ ПЕРИОД</button>
+          </div>
+          <!-- END table-btn -->
+
+        </vs-collapse-item>
+
+
+      </vs-collapse>
+    </div>
+  </template>
+  <!-- /////////////////////////////////////////////// -->
+
+  <!-- <span class="lain-end"></span> -->
+
+
+</div>

@@ -1,0 +1,74 @@
+// footer-hero
+.footer-hero {
+    position: relative;
+    width: 100%;
+    height: 38rem;
+    @include r($xs) {
+        height: 30rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url('../img/mountains.png');
+        background-repeat: no-repeat;
+        top: -31rem;
+        height: 200%;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        background-size: cover !important;
+        background-position: 50% 50% !important;
+        @include r($xs) {
+            top: -30rem;
+        }
+    }
+
+    &__shadow {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../img/shadow.png');
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        bottom: -53px;
+        opacity: .2;
+    }
+
+    img {
+        object-fit: cover;
+        margin-bottom: -.6rem;
+    }
+}
+
+
+// footer
+.footer {
+    background-color: $color-footer-bg;
+    padding: 2.5rem;
+
+    &__nav {
+
+        @include r($sm) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--link {
+            color: #fff;
+            font-family: $m-100;
+            margin-right: 3rem;
+            font-size: 1.6rem;
+
+            @include r($sm) {
+                margin-bottom: 1rem;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

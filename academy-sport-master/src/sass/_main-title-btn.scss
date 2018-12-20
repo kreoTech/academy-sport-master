@@ -1,0 +1,21 @@
+.main-title-btn {
+    background-color: $color-gray;
+    font-family: $m-500;
+    min-height: 12rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 4rem;
+    font-family: $m-500;
+    color: $color-txt;
+    position: relative;
+    font-weight: 900;
+
+    &__title {
+        flex: .9;
+    }
+
+    @include r($sm) {
+        display: none;
+    }
+}

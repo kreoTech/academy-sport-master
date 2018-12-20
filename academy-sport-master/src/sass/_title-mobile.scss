@@ -1,0 +1,66 @@
+// main-title-mobile
+.main-title-mobile {
+    background-color: $color-gray;
+    font-family: $m-500;
+    min-height: 12rem;
+    align-items: center;
+    align-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-family: $m-500;
+    color: $color-txt;
+    position: relative;
+    font-weight: 900;
+    display: none;
+    @include r($sm) {
+        background: #f5f6f7;
+    }
+
+    &__btns {
+        display: flex;
+
+        &--input {
+            position: absolute;
+            left: -676%;
+            top: 0px;
+            width: 32rem !important;
+            height: 5rem;
+            // display: none;
+        }
+    }
+
+    &__title {
+        flex: 1;
+        font-size: 2rem;
+        font-family: $m-500;
+        color: #333333;
+        @include r($sm) {
+            font-size: rems(15);
+        }
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        display: inline-block;
+    }
+
+    .menu-mob {
+        margin-right: 2rem;
+        @include r($sm) {
+            margin-right: rems(10);
+        }
+    }
+
+
+    @include r($sm) {
+        display: flex;
+        padding-left: 33px;
+        padding-right: rems(30);
+        min-height: rems(114);
+    }
+}
+
+.form-search-mobile {
+    position: relative;
+}

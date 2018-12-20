@@ -1,0 +1,53 @@
+// athletes
+
+.athletes-wr {
+    margin-top: 2rem;
+
+    @include r($lg) {
+        overflow-x: scroll;
+    }
+
+}
+
+.athletes-desc {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+
+    &__total {
+        margin-right: 4rem;
+        color: $color-txt;
+        font-family: $m-500;
+    }
+
+    &__btn {
+        margin-top: 0;
+    }
+}
+
+
+.athletes-tb {
+
+    &__head {
+
+        &--cell {
+            padding: 3rem;
+            text-align: left;
+            border: none;
+            color: #000;
+        }
+
+    }
+
+    &__cell {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left;
+        color: #000;
+        border: none;
+        border-bottom: 1px solid $color-line;
+    }
+}

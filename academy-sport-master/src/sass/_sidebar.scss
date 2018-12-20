@@ -1,0 +1,79 @@
+// sidebar
+.sidebar {
+
+    @include r($sm) {
+        display: none;
+    }
+
+    &__hero {
+        background-color: $color-gray;
+        padding: 4rem 4rem 4rem 8rem;
+        font-family: $m-500;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 12rem;
+        max-height: 12rem;
+        margin-bottom: 2rem;
+
+        &--ava {
+            position: absolute;
+            left: -1.4rem;
+            top: 2.3rem;
+            background-color: $color-red;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2rem;
+            font-size: 2.4rem;
+        }
+
+        &--hello {
+            font-weight: 300;
+            font-family: $m-100;
+        }
+    }
+
+    &__menu {
+        font-family: $m-100;
+        &--link {
+            display: block;
+            color: $color-txt;
+            padding: 1rem 1rem 1rem 3rem;
+            display: flex;
+            align-content: center;
+            &:hover,
+            &--active {
+                color: $color-txt;
+                background-color: $color-hover;
+                text-decoration: none;
+                border-left: .4rem solid $color-blue;
+            }
+        }
+
+    }
+
+    &__btn-big {
+        background-color: $color-blue;
+        width: 100%;
+        padding: 2rem;
+        color: #fff;
+        display: block;
+        margin-top: 2rem;
+        font-family: $m-100;
+        font-size: 1.6rem;
+        padding-left: 7rem;
+        &:hover {
+            color: #fff;
+            background-color: $color-btn-hover;
+            text-decoration: none;
+        }
+    }
+
+    .icon-sidebar {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+    }
+
+}

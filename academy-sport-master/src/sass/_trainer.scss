@@ -1,0 +1,425 @@
+._trainer-tile-mobile {
+    display: none;
+
+    @include r($sm) {
+        display: block;
+    }
+
+    &__btn {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__hero {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+
+        .vs-select--input {
+            color: inherit;
+            width: 100%;
+            position: relative;
+            height: 4.5rem;
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, .1);
+            padding-right: 2rem;
+            cursor: pointer;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-family: $m-300;
+            font-size: 1.4rem;
+            color: #4d4e4e;
+        }
+
+
+
+        .con-select {
+            width: 100%;
+        }
+
+        .vs-select--icon {
+            position: absolute;
+            right: 5px;
+            font-size: 1.0625em;
+            top: 50%;
+            pointer-events: none;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-color: $color-red;
+            color: #fff;
+            border-radius: 50%;
+            padding: .3rem;
+        }
+
+    }
+}
+
+.pagination-mob {
+    display: none;
+
+    @include r($sm) {
+        display: block;
+        text-align: center;
+        margin-top: 7rem;
+    }
+}
+
+._trainer-tile {
+    display: flex;
+
+    @include r($lg) {
+        flex-wrap: wrap;
+    }
+
+    .vs-select--item {
+        font-family: $m-300;
+        font-size: 1.4rem;
+    }
+
+    .vs-select--input {
+        color: inherit;
+        width: 100%;
+        position: relative;
+        height: 4.5rem;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        padding-right: 20px;
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: $m-300;
+        font-size: 1.4rem;
+        color: #4d4e4e;
+    }
+
+    .vs-select--icon {
+        position: absolute;
+        right: 5px;
+        font-size: 1.0625em;
+        top: 50%;
+        pointer-events: none;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color: $color-red;
+        color: #fff;
+        border-radius: 50%;
+        padding: .8rem;
+    }
+
+    .hero-btn {
+        padding: 1.3rem 3rem !important;
+    }
+
+
+}
+
+.trainer-message {
+    display: block;
+    margin-top: 2rem;
+
+    &__item {
+        display: flex;
+        border: 1px solid#d1d2d3;
+        height: 5rem;
+        align-items: center;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        font-family: $m-100;
+
+        .vs-checkbox-danger .vs-checkbox {
+            border: 1px solid rgb(180, 180, 180) !important;
+        }
+
+        &--check {
+            margin-right: 3rem;
+        }
+
+        &--date {
+            margin-right: 2rem;
+            color: #bcbec0;
+        }
+
+        &--title {
+            color: #4d4d4d;
+        }
+
+    }
+}
+
+.pagination-wr {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.pagination {
+    display: inline-flex;
+    border: 1px solid #d4d5d5;
+    border-radius: 30px;
+    overflow: hidden;
+
+
+    a {
+        display: block;
+        padding: 1rem 1.6rem;
+        color: #000;
+
+        &:not(:last-child) {
+            border-right: 1px solid #d4d5d5;
+        }
+
+        &:hover {
+            background-color: $color-red;
+            color: #fff;
+        }
+    }
+
+    .pag-l {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            @include vcenter;
+            width: 1rem;
+            height: 1rem;
+            background: url('../img/icons/pag-l.svg');
+            background-repeat: no-repeat !important;
+        }
+
+        &:hover::before {
+            background: url('../img/icons/pag-l-h.svg');
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+
+    .pag-r {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            @include vcenter;
+            width: 1rem;
+            height: 1rem;
+            background: url('../img/icons/pag-r.svg');
+            background-repeat: no-repeat;
+        }
+
+        &:hover::before {
+            background: url('../img/icons/pag-r-h.svg');
+            background-repeat: no-repeat;
+        }
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+
+
+
+    @include r($sm) {
+        display: none;
+    }
+}
+
+// menu sidebar 
+.trainer-link {
+    position: relative;
+
+    &__counter {
+        position: absolute;
+        right: 0;
+        background-color: $color-blue;
+        color: #fff;
+        border-radius: 50%;
+        padding: .3rem 1rem;
+
+        @include r($sm) {
+            right: 5rem;
+        }
+    }
+}
+
+
+// popUp
+.con-vs-popup .vs-popup {
+    width: 67rem;
+}
+
+.pop-trainer {
+
+
+    .vs-popup--close {
+        box-shadow: none;
+        background: $color-blue;
+        color: #fff;
+        transform: translate(-30px, 20px);
+        font-size: 1.5rem;
+        border-radius: 50%;
+    }
+
+
+
+    &__title {
+        font-family: $m-500;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        color: #333333;
+        padding-left: 5rem;
+        margin-top: 2rem;
+
+        @include r($sm) {
+            font-size: 2rem;
+        }
+    }
+
+    .vs-popup {
+        position: relative;
+
+        &__close-txt {
+            position: absolute;
+            top: 25px;
+            right: 75px;
+            font-family: $m-100;
+            color: #464647;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #464647;
+        }
+
+        &--header {
+            background: transparent !important;
+        }
+    }
+
+
+
+
+
+}
+
+.trainer-form {
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+    label {
+        text-transform: uppercase;
+        font-family: $m-500;
+        font-size: 1.6rem;
+        color: #5d5d5d;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        width: 100%;
+        border: 1px solid #d0d1d2;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        font-family: $m-100;
+        color: #333333;
+        font-size: 1.4rem;
+        height: 8rem;
+    }
+
+    &__btn {
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
+    }
+
+    &__bottom {
+        margin-top: 2.5rem;
+    }
+
+    &__hero {
+        display: flex;
+        margin-top: 3rem;
+
+        @include r($sm) {
+            flex-direction: column;
+        }
+
+        &__item {
+            flex: 1;
+
+            @include r($sm) {
+                margin-bottom: 2rem;
+            }
+
+            @include not-r(3rem);
+
+            @include r($sm) {
+                @include not-r(0rem);
+            }
+
+            input {
+                width: 100%;
+                height: 4rem;
+                border-radius: 20px;
+                border: 1px solid #d0d1d2;
+                padding: 1rem 2rem;
+                font-family: $m-100;
+                color: #333333;
+                font-size: 1.4rem;
+            }
+
+
+            &--file {
+                width: 100%;
+                height: 4rem;
+                border-radius: 20px;
+                border: 1px solid #d0d1d2;
+                padding: 1rem 2rem;
+                font-family: $m-100;
+                color: #333333;
+                font-size: 1.4rem;
+                margin-top: 1rem;
+
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: url('../img/icons/file.svg');
+                    background-repeat: no-repeat;
+                    right: .5rem;
+                    width: 3rem;
+                    height: 3rem;
+                    z-index: 10;
+                }
+
+                &:hover::before {
+                    background: url('../img/icons/file-h.svg');
+                }
+
+
+                .icon-file {
+                    // position: relative;
+                    // width: 100%;
+                    // display: flex;
+                    // align-items: center;
+                    // align-content: center;
+                    
+
+                    
+                }
+            }
+
+
+        }
+
+    }
+
+}
