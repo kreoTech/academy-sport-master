@@ -124,9 +124,37 @@
     @include r(1400px) {
         right: -170px;
     }
+    @include r(1270px) {
+        right: -199px;
+    }
 
     @include r($md) {
         display: none;
+    }
+}
+
+
+.vs-select--options {
+    border: 2px solid #e3e3e3;
+    border-radius: 21px 21px 0 0;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+}
+.vs-select--item {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.4rem;
+    font-family: $m-500;
+    color: #4d4e4e !important;
+    &:hover {
+        border: 1px solid #d3d3d3;
+        background: none;
+    }
+    &.activex {
+        background: #f2f2f2 !important;
+        font-weight: normal !important;
     }
 }
 

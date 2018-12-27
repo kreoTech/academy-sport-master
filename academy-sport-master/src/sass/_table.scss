@@ -5,7 +5,7 @@
     width: 100%;
 
     @include r($sm) {
-        overflow-x: scroll;
+        //overflow-x: scroll;
         margin-top: 14px;
     }
 }
@@ -41,6 +41,9 @@
     font-size: 1.4rem;
     padding: 1rem 3rem;
     color: $color-table-hero;
+    .cell {
+        text-align: center;
+    }
     @include r($sm) {
         .cell:first-child {
             font-size: rems(13) !important;
@@ -48,6 +51,15 @@
     }
 
 
+}
+
+@include rmin($md) {
+    .tablesaw-swipe th.tablesaw-swipe-cellhidden, .tablesaw-swipe td.tablesaw-swipe-cellhidden {
+        display: table-cell !important;
+    }
+    .tablesaw-bar {
+        display: none;
+    }
 }
 
 .cell {

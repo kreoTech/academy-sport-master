@@ -20,7 +20,9 @@
         background-size: cover !important;
         background-position: 50% 50% !important;
         @include r($xs) {
-            top: -30rem;
+            background-position:11% 50% !important;
+            top: -18rem;
+            height: 180%;
         }
     }
 
@@ -47,13 +49,19 @@
 .footer {
     background-color: $color-footer-bg;
     padding: 2.5rem;
+    @include r($sm) {
+        padding-top: 3rem;
+        .container {
+            padding: 0;
+        }
+    }
 
     &__nav {
 
         @include r($sm) {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
 
         &--link {
@@ -64,6 +72,9 @@
 
             @include r($sm) {
                 margin-bottom: 1rem;
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
             &:hover {

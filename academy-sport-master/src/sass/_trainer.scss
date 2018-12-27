@@ -19,8 +19,7 @@
             color: inherit;
             width: 100%;
             position: relative;
-            height: 4.5rem;
-            padding: 2rem;
+            height: 4rem;
             border-radius: 20px;
             border: 1px solid rgba(0, 0, 0, .1);
             padding-right: 2rem;
@@ -81,9 +80,11 @@
         color: inherit;
         width: 100%;
         position: relative;
-        height: 4.5rem;
-        padding: 20px;
+        height: 4.1rem;
+        padding: 1rem 2rem;
         border-radius: 20px;
+        font-weight: normal;
+        background: #fff;
         border: 1px solid rgba(0, 0, 0, .1);
         padding-right: 20px;
         cursor: pointer;
@@ -93,6 +94,7 @@
         font-size: 1.4rem;
         color: #4d4e4e;
     }
+
 
     .vs-select--icon {
         position: absolute;
@@ -107,11 +109,6 @@
         border-radius: 50%;
         padding: .8rem;
     }
-
-    .hero-btn {
-        padding: 1.3rem 3rem !important;
-    }
-
 
 }
 

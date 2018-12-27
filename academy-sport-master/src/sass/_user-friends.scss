@@ -25,17 +25,20 @@
     &__title {
         text-transform: uppercase;
         font-family: $m-500;
+        font-weight: 500;
         font-size: 1.5rem;
         // padding-left: 1rem;
         position: relative;
+        line-height: 1.2em;
+
 
         &--num {
             position: absolute;
-            font-size: 3.9rem;
+            font-size: 4rem;
             font-family: $m-300;
             color: $color-txt;
             left: -3rem;
-            top: -.3rem;
+            top: 1rem;
 
             &::before {}
         }
@@ -43,6 +46,7 @@
 
     &__title-desc {
         font-family: $m-300;
+        font-weight: 300;
         margin-bottom: 2rem;
     }
 
@@ -59,10 +63,27 @@
         text-align: center;
 
         &--items {
-            width: 4rem;
-            height: 4rem;
+            width: remc(36);
+            height: remc(36);
             display: inline-block;
             margin-right: 1rem;
+            @include r($sm) {
+                width: rems(36);
+                height: rems(36);
+            }
+            path.cls-1 {
+                fill: #459ad3;
+            }
+            path.cls-2 {
+                fill: #fff;
+            }
+        }
+        a {
+            &:hover {
+                path.cls-1 {
+                    fill: #61b4e2;
+                }
+            }
         }
     }
 }

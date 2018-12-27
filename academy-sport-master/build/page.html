@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/vuesax/dist/vuesax.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet" />
     <link rel="stylesheet" media="all" href="css/app.css" />
+    <link rel="stylesheet" media="all" href="js/tablesaw/tablesaw.css" />
   </head>
   <body>
     <!-- BEGIN content -->
@@ -122,39 +123,41 @@
                     </div>
                     <!-- START table -->
                     <div class="wrapper">
-                      <div class="table">
-                        <div class="row header-tb">
-                          <div class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </div>
-                          <div class="cell">ВСЕГО</div>
-                          <div class="cell hidden-xs"> СЕГОДНЯ</div>
-                          <div class="cell hidden-xs"> ЗА НЕДЕЛЮ </div>
-                          <div class="cell hidden-xs"> ЗА МЕСЯЦ </div>
-                          <div class="cell hidden-xs"> ЗА ГОД </div>
-                          <div class="cell hidden-xs"> ЗА ПЕРИОД </div>
-                        </div>
+                      <table class="table" data-tablesaw-mode="swipe">
+                        <thead>
+                          <tr class="row header-tb">
+                            <th class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </th>
+                            <th class="cell">ВСЕГО</th>
+                            <th class="cell"> СЕГОДНЯ</th>
+                            <th class="cell"> ЗА НЕДЕЛЮ </th>
+                            <th class="cell"> ЗА МЕСЯЦ </th>
+                            <th class="cell"> ЗА ГОД </th>
+                            <th class="cell"> ЗА ПЕРИОД </th>
+                          </tr>
+                        </thead>
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Поступило на счет </div>
-                          <div class="cell">50 000</div>
-                          <div class="cell hidden-xs"> 1000 </div>
-                          <div class="cell hidden-xs"> 1000 </div>
-                          <div class="cell hidden-xs"> 15000 </div>
-                          <div class="cell hidden-xs"> 20000 </div>
-                          <div class="cell hidden-xs"> 34000 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Поступило на счет </td>
+                          <td class="cell">50 000</td>
+                          <td class="cell"> 1000 </td>
+                          <td class="cell"> 1000 </td>
+                          <td class="cell"> 15000 </td>
+                          <td class="cell"> 20000 </td>
+                          <td class="cell"> 34000 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Выведено со счета </div>
-                          <div class="cell">50 000</div>
-                          <div class="cell hidden-xs"> 1000 </div>
-                          <div class="cell hidden-xs"> 1000 </div>
-                          <div class="cell hidden-xs"> 15000 </div>
-                          <div class="cell hidden-xs"> 20000 </div>
-                          <div class="cell hidden-xs"> 34000 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Выведено со счета </td>
+                          <td class="cell">50 000</td>
+                          <td class="cell"> 1000 </td>
+                          <td class="cell"> 1000 </td>
+                          <td class="cell"> 15000 </td>
+                          <td class="cell"> 20000 </td>
+                          <td class="cell"> 34000 </td>
+                        </tr>
                         <!-- END row -->
-                      </div>
+                      </table>
                     </div>
                     <!-- END table -->
                     <!-- START table-btn -->
@@ -176,72 +179,74 @@
                     </div>
                     <!-- START table -->
                     <div class="wrapper">
-                      <div class="table">
-                        <div class="row header-tb">
-                          <div class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </div>
-                          <div class="cell hidden-xs"> ВСЕГО </div>
-                          <div class="cell hidden-xs"> сегодня </div>
-                          <div class="cell hidden-xs"> за неделю </div>
-                          <div class="cell"> за месяц </div>
-                          <div class="cell hidden-xs"> за год </div>
-                          <div class="cell hidden-xs"> за период </div>
-                        </div>
+                      <table class="table" data-tablesaw-mode="swipe">
+                        <thead>
+                          <tr class="row header-tb">
+                            <th class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </th>
+                            <th class="cell "> ВСЕГО </th>
+                            <th class="cell "> сегодня </th>
+                            <th class="cell "> за неделю </th>
+                            <th class="cell"> за месяц </th>
+                            <th class="cell "> за год </th>
+                            <th class="cell "> за период </th>
+                          </tr>
+                        </thead>
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Лыжные гонки </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Лыжные гонки </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Биатлон </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Биатлон </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Легкая атлетика </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Легкая атлетика </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Гонки героев </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Гонки героев </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Функциональная тренировка </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Функциональная тренировка </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
-                      </div>
+                      </table>
                     </div>
                     <!-- END table -->
                     <!-- START table-btn -->
@@ -263,72 +268,74 @@
                     </div>
                     <!-- START table -->
                     <div class="wrapper">
-                      <div class="table">
-                        <div class="row header-tb">
-                          <div class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </div>
-                          <div class="cell hidden-xs"> ВСЕГО </div>
-                          <div class="cell hidden-xs"> сегодня </div>
-                          <div class="cell hidden-xs"> за неделю </div>
-                          <div class="cell"> за месяц </div>
-                          <div class="cell hidden-xs"> за год </div>
-                          <div class="cell hidden-xs"> за период </div>
-                        </div>
+                      <table class="table" data-tablesaw-mode="swipe">
+                        <thead>
+                          <tr class="row header-tb">
+                            <th class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </th>
+                            <th class="cell "> ВСЕГО </th>
+                            <th class="cell "> сегодня </th>
+                            <th class="cell "> за неделю </th>
+                            <th class="cell"> за месяц </th>
+                            <th class="cell "> за год </th>
+                            <th class="cell "> за период </th>
+                          </tr>
+                        </thead>
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Лыжные гонки </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Лыжные гонки </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Биатлон </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Биатлон </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Легкая атлетика </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Легкая атлетика </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Гонки героев </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Гонки героев </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Функциональная тренировка </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Функциональная тренировка </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
-                      </div>
+                      </table>
                     </div>
                     <!-- END table -->
                     <!-- START table-btn -->
@@ -350,72 +357,74 @@
                     </div>
                     <!-- START table -->
                     <div class="wrapper">
-                      <div class="table">
-                        <div class="row header-tb">
-                          <div class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </div>
-                          <div class="cell hidden-xs"> ВСЕГО </div>
-                          <div class="cell hidden-xs"> сегодня </div>
-                          <div class="cell hidden-xs"> за неделю </div>
-                          <div class="cell"> за месяц </div>
-                          <div class="cell hidden-xs"> за год </div>
-                          <div class="cell hidden-xs"> за период </div>
-                        </div>
+                      <table class="table" data-tablesaw-mode="swipe">
+                        <thead>
+                          <tr class="row header-tb">
+                            <th class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </th>
+                            <th class="cell "> ВСЕГО </th>
+                            <th class="cell "> сегодня </th>
+                            <th class="cell "> за неделю </th>
+                            <th class="cell"> за месяц </th>
+                            <th class="cell "> за год </th>
+                            <th class="cell "> за период </th>
+                          </tr>
+                        </thead>
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Лыжные гонки </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Лыжные гонки </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Биатлон </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Биатлон </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Легкая атлетика </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Легкая атлетика </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Гонки героев </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Гонки героев </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Функциональная тренировка </div>
-                          <div class="cell hidden-xs"> 108 </div>
-                          <div class="cell hidden-xs"> 0 </div>
-                          <div class="cell hidden-xs"> 3 </div>
-                          <div class="cell"> 17 </div>
-                          <div class="cell hidden-xs"> 32 </div>
-                          <div class="cell hidden-xs"> 12 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Функциональная тренировка </td>
+                          <td class="cell "> 108 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 3 </td>
+                          <td class="cell"> 17 </td>
+                          <td class="cell "> 32 </td>
+                          <td class="cell "> 12 </td>
+                        </tr>
                         <!-- END row -->
-                      </div>
+                      </table>
                     </div>
                     <!-- END table -->
                     <!-- START table-btn -->
@@ -439,39 +448,41 @@
                     </div>
                     <!-- START table -->
                     <div class="wrapper">
-                      <div class="table">
-                        <div class="row header-tb">
-                          <div class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </div>
-                          <div class="cell"> ВСЕГО </div>
-                          <div class="cell hidden-sm"> сегодня </div>
-                          <div class="cell hidden-sm"> за неделю </div>
-                          <div class="cell hidden-sm"> за месяц </div>
-                          <div class="cell hidden-sm"> за год </div>
-                          <div class="cell hidden-sm"> за период </div>
-                        </div>
+                      <table class="table" data-tablesaw-mode="swipe">
+                        <thead>
+                          <tr class="row header-tb">
+                            <th class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </th>
+                            <th class="cell"> ВСЕГО </th>
+                            <th class="cell "> сегодня </th>
+                            <th class="cell "> за неделю </th>
+                            <th class="cell "> за месяц </th>
+                            <th class="cell "> за год </th>
+                            <th class="cell "> за период </th>
+                          </tr>
+                        </thead>
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> По ссылке </div>
-                          <div class="cell"> 50 000 </div>
-                          <div class="cell hidden-sm"> 1000 </div>
-                          <div class="cell hidden-sm"> 1000 </div>
-                          <div class="cell hidden-sm"> 15000 </div>
-                          <div class="cell hidden-sm"> 20000 </div>
-                          <div class="cell hidden-sm"> 34000 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> По ссылке </td>
+                          <td class="cell"> 50 000 </td>
+                          <td class="cell "> 1000 </td>
+                          <td class="cell "> 1000 </td>
+                          <td class="cell "> 15000 </td>
+                          <td class="cell "> 20000 </td>
+                          <td class="cell "> 34000 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Из писем </div>
-                          <div class="cell"> 50 000 </div>
-                          <div class="cell hidden-sm"> 1000 </div>
-                          <div class="cell hidden-sm"> 1000 </div>
-                          <div class="cell hidden-sm"> 15000 </div>
-                          <div class="cell hidden-sm"> 20000 </div>
-                          <div class="cell hidden-sm"> 34000 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Из писем </td>
+                          <td class="cell"> 50 000 </td>
+                          <td class="cell "> 1000 </td>
+                          <td class="cell "> 1000 </td>
+                          <td class="cell "> 15000 </td>
+                          <td class="cell "> 20000 </td>
+                          <td class="cell "> 34000 </td>
+                        </tr>
                         <!-- END row -->
-                      </div>
+                      </table>
                     </div>
                     <!-- END table -->
                     <!-- START table-btn -->
@@ -493,39 +504,41 @@
                     </div>
                     <!-- START table -->
                     <div class="wrapper">
-                      <div class="table">
-                        <div class="row header-tb">
-                          <div class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </div>
-                          <div class="cell"> ВСЕГО </div>
-                          <div class="cell hidden-sm"> сегодня </div>
-                          <div class="cell hidden-sm"> за неделю </div>
-                          <div class="cell hidden-sm"> за месяц </div>
-                          <div class="cell hidden-sm"> за год </div>
-                          <div class="cell hidden-sm"> за период </div>
-                        </div>
+                      <table class="table" data-tablesaw-mode="swipe">
+                        <thead>
+                          <tr class="row header-tb">
+                            <th class="cell" style="text-align: left; font-weight: 900; font-size: 1.6rem;"> ПАРАМЕТРЫ </th>
+                            <th class="cell"> ВСЕГО </th>
+                            <th class="cell "> сегодня </th>
+                            <th class="cell "> за неделю </th>
+                            <th class="cell "> за месяц </th>
+                            <th class="cell "> за год </th>
+                            <th class="cell "> за период </th>
+                          </tr>
+                        </thead>
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Опубликовали ссылку </div>
-                          <div class="cell"> 50 000 </div>
-                          <div class="cell hidden-sm"> 1000 </div>
-                          <div class="cell hidden-sm"> 1000 </div>
-                          <div class="cell hidden-sm"> 15000 </div>
-                          <div class="cell hidden-sm"> 20000 </div>
-                          <div class="cell hidden-sm"> 34000 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Опубликовали ссылку </td>
+                          <td class="cell"> 50 000 </td>
+                          <td class="cell "> 1000 </td>
+                          <td class="cell "> 1000 </td>
+                          <td class="cell "> 15000 </td>
+                          <td class="cell "> 20000 </td>
+                          <td class="cell "> 34000 </td>
+                        </tr>
                         <!-- END row -->
                         <!-- START row -->
-                        <div class="row">
-                          <div class="cell" style="text-align: left;"> Разослали писем </div>
-                          <div class="cell"> 50 000 </div>
-                          <div class="cell hidden-sm"> 0 </div>
-                          <div class="cell hidden-sm"> 2000 </div>
-                          <div class="cell hidden-sm"> 15000 </div>
-                          <div class="cell hidden-sm"> 20000 </div>
-                          <div class="cell hidden-sm"> 34000 </div>
-                        </div>
+                        <tr class="row">
+                          <td class="cell" style="text-align: left;"> Разослали писем </td>
+                          <td class="cell"> 50 000 </td>
+                          <td class="cell "> 0 </td>
+                          <td class="cell "> 2000 </td>
+                          <td class="cell "> 15000 </td>
+                          <td class="cell "> 20000 </td>
+                          <td class="cell "> 34000 </td>
+                        </tr>
                         <!-- END row -->
-                      </div>
+                      </table>
                     </div>
                     <!-- END table -->
                     <!-- START table-btn -->
@@ -565,6 +578,9 @@
     <!-- END content -->
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/tablesaw/tablesaw.js"></script>
+    <script type="text/javascript" src="js/tablesaw/tablesaw-init.js"></script>
+    <!--<script type="text/javascript" src="js/app.js"></script>-->
     <!-- END scripts -->
   </body>
 </html>

@@ -21,11 +21,17 @@
 
         &--input {
             position: absolute;
-            left: -676%;
-            top: 0px;
-            width: 32rem !important;
-            height: 5rem;
-            // display: none;
+            left: -534%;
+            top: -3px;
+            height: rems(41);
+            padding: rems(10) rems(20) rems(9) !important;
+            width: rems(231) !important;
+            font-size: rems(14) !important;
+            font-family: $m-500 !important;
+            color: $color-table-hero !important;
+            margin-right: 0 !important;
+            background: #fff !important;
+            font-weight: normal !important;
         }
     }
 
@@ -43,6 +49,10 @@
         width: 5rem;
         height: 5rem;
         display: inline-block;
+        &.search-mob {
+            position: relative;
+            z-index: 100;
+        }
     }
 
     .menu-mob {

@@ -2,6 +2,9 @@
 .vs-sidebar {
     max-width: 40rem;
     // position: relative;
+    @include r($sm) {
+        max-width: rems(290);
+    }
 }
 
 .vs-sidebar header {
@@ -9,12 +12,18 @@
     color: #fff;
     font-family: $m-500;
     padding-left: 4rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    @include r($sm) {
+        padding-left: rems(37);
+        font-size: rems(15);
+    }
 }
 
 .vs-sidebar .vs-sidebar-items .vs-sidebar-item {
     img {
         width: 3rem;
-        margin-right: 3rem;
+        margin-right: rems(11);
     }
 
     a {
@@ -31,13 +40,14 @@
 .sidebar-mob-btn {
     background-color: $color-blue;
     width: 100%;
-    padding: 2rem;
+    padding: rems(23) rems(37);
     color: #fff;
     display: block;
-    margin-top: 2rem;
+    margin-top: rems(2);
     font-family: $m-500;
-    font-size: 2rem;
-    padding-left: 7rem;
+    font-size: rems(13);
+    text-transform: uppercase;
+    font-weight: 500;
 
     &:hover {
         color: #fff;
@@ -49,20 +59,22 @@
 
 .close-sidebar-menu {
     position: absolute;
-    right: -37px;
+    right: -36px;
     top: 0;
     background-color: red;
+    line-height: 0em;
+    padding: 5px 5px 6px 5px;
 
     @include r($xs) {
-        right: -31px;
+        right: -35px;
     }
 
     i {
         color: #fff;
-        font-size: 3.7rem;
+        font-size: rems(25);
 
         @include r($xs) {
-            font-size: 4.9rem;
+            font-size: rems(25);
         }
     }
 }
@@ -70,12 +82,24 @@
 
 .icon-sidebar {
     width: 3rem;
-    margin-right: 3rem;
+    margin-right: rems(10);
+}
+.vs-sidebar--items {
+    padding-top: 20px;
 }
 
 .vs-sidebar--item a {
     font-family: $m-500;
     color: #3b1c15;
+    padding-left: rems(37);
+    color: #3b1c15;
+    font-size: rems(12);
+    font-weight: 400;
     text-transform: uppercase;
-    font-size: 2rem;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.vs-sidebar--item i.material-icons {
+    display: none;
 }

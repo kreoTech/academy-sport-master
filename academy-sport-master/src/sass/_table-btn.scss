@@ -22,10 +22,12 @@
     &--blue {
         color: $color-btn-txt-1;
         background-color: $color-blue;
-        padding: 1.3rem 4rem;
+        padding: 1rem 2.1rem;
+        min-width: 141px;
         border-radius: 50px;
         font-size: 1.4rem;
         font-family: $m-500;
+        font-weight: normal;
         text-transform: uppercase;
         transition: all .5s;
 
@@ -42,21 +44,23 @@
 
     &--white {
         color: $color-btn-txt-2;
-        padding: 1.3rem 4rem;
+        padding: 1rem 2.1rem;
+        min-width: 141px;
         border-radius: 50px;
         border: 1px solid $color-line;
         font-size: 1.4rem;
         font-family: $m-500;
         text-transform: uppercase;
         transition: all .5s;
+        font-weight: normal;
         background-color: #fff;
 
         &:hover {
-            border: 1px solid $color-blue;
+            border: 1px solid #dddddd;
         }
 
         &:active {
-            background-color: $color-blue;
+            background-color: #dddddd;
             color: #fff;
         }
         @include r($sm) {
@@ -79,7 +83,6 @@
 }
 
 .hero-btn {
-    padding: 1.3rem;
     margin-top: 0;
 }
 
