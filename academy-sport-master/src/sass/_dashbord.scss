@@ -8,8 +8,10 @@
     border: 1px solid $color-line;
 
     @include r($lg) {
-        flex-direction: column;
-        text-align: center;
+        //flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        text-align: left;
     }
 
     &__ava {
@@ -23,12 +25,25 @@
 
         @include r($lg) {
             margin-bottom: 2rem;
+            display: block;
+            + .dashbord__name {
+                width: 100%;
+                margin-left: (- rems(52));
+                padding-left: rems(70);
+            }
         }
+
     }
 
     &__name {
+
         @include r($lg) {
             margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        @include r($sm) {
+            font-size: rems(13);
         }
 
         &--lable {

@@ -30,6 +30,15 @@
         // padding-left: 1rem;
         position: relative;
         line-height: 1.2em;
+        nobr {
+            text-transform: uppercase;
+        }
+        @include r($sm) {
+            max-width: 80%;
+            font-size: rems(15);
+            font-family: $m-300;
+            font-weight: 300;
+        }
 
 
         &--num {
@@ -39,6 +48,9 @@
             color: $color-txt;
             left: -3rem;
             top: 1rem;
+            @include r($sm) {
+                font-size: rems(33);
+            }
 
             &::before {}
         }
@@ -48,6 +60,9 @@
         font-family: $m-300;
         font-weight: 300;
         margin-bottom: 2rem;
+        @include r($sm) {
+            font-size: rems(15);
+        }
     }
 
     .input {

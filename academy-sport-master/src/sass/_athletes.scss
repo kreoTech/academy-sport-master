@@ -15,8 +15,15 @@
     justify-content: flex-end;
     margin-top: 2rem;
 
+    @include r($sm) {
+        justify-content: space-between;
+        &__btn {
+            margin-top: 0 !important;
+        }
+    }
+
     &__total {
-        margin-right: 4rem;
+        margin-right: 3rem;
         color: $color-txt;
         font-family: $m-500;
     }
@@ -33,6 +40,8 @@
 
         &--cell {
             padding: 3rem;
+            padding-left: 4rem;
+            padding-right: 1rem;
             text-align: left;
             border: none;
             color: #000;
@@ -43,7 +52,7 @@
     &__cell {
         padding-top: 2rem;
         padding-bottom: 2rem;
-        padding-left: 1rem;
+        padding-left: 4rem !important;
         padding-right: 1rem;
         text-align: left;
         color: #000;
